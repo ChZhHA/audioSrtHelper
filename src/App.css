@@ -1,0 +1,75 @@
+* {
+    user-select: none;
+}
+
+.cover {
+    box-shadow   : 2px 3px 10px rgb(214, 214, 214);
+    display      : inline-flex;
+    width        : calc(100% - 30px);
+    margin-left  : 15px;
+    margin-top   : 15px;
+    margin-bottom: 10px;
+}
+
+.player {
+    position                 : relative;
+    /* width                 : calc(100% - 150px); */
+    flex-grow                : 1;
+    height                   : 30px;
+    background-color         : rgb(136, 136, 136);
+    overflow                 : hidden;
+    display                  : inline-flex;
+    vertical-align           : bottom;
+
+}
+
+.player[data-enable="1"] {
+    background-color: rgb(255, 255, 255);
+}
+
+.player .progress {
+    width           : 0;
+    height          : 30px;
+    position        : absolute;
+    background-color: rgba(123, 211, 238, 0.692);
+}
+
+.player .item {
+    position        : absolute;
+    height          : 30px;
+    background-color: rgb(203, 238, 123);
+}
+
+.player .item[data-enable="1"] {
+    background-color: rgba(255, 113, 57, 0.459);
+}
+
+.list {
+    position: absolute;
+    width   : calc(100% - 30px);
+    height  : calc(100% - 130px);
+    overflow: scroll;
+    padding : 10px;
+}
+
+.list .item {
+    font-weight: 100;
+    color      : rgb(95, 95, 95);
+}
+
+.list .item[data-enable="1"] {
+    color           : #000;
+    font-weight     : 400;
+    background-color: rgb(255, 197, 159);
+}
+
+.control {
+    width           : 120px;
+    height          : 30px;
+    background-color: rgb(255, 255, 255);
+    border-right    : 5px solid rgb(238, 238, 238);
+    display         : inline-flex;
+    justify-content : center;
+    align-items     : center;
+
+}
